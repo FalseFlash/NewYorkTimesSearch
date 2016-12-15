@@ -7,18 +7,29 @@ $("#buttonSearch").on("click", function(){
   var searchTerm, numberRecords, startYear, endYear;
   const NYT_URL = "http://www.nytimes.com/"; // used to build images
   // CREATE API KEY;
+  var NYT_API = {
+    "key": "api-key",
+    "value": "119365df6bae44be9b30dc46ad9fbadd",
+  };
+  
   var API_key = NYT_API.key; // >> api-key
   var API_value = NYT_API.value; // >> try to guess what this will be :)
   // console.log(API_key + "=" + API_value);
   var API_key_value = API_key + "=" + API_value;
 
-
+  
   // 0.5) Validate FORM - required text in search!
   // need to have at least searchTerm --> or it will break!
   // TO DO
 
   // 1) get content from the form
   searchTerm = $("#searchTerm").val();
+
+  if(searchTerm == '') {
+  	$("#resultsTarget").append( $("<h4>").text("Search term is required.") );
+  	return;
+  }
+
   numberRecords = $("#numberRecords :selected").text().trim();
   startYear = $("#startYear").val();
   endYear = $("#endYear").val();
@@ -125,24 +136,24 @@ $("#buttonSearch").on("click", function(){
 // PART 2 --- create Event listener for clear button
 $("#buttonClear").on("click", function(){
   // test to see if I can get the
-  // console.log( $("#numberRecords") );
-  // $("#numberRecords")
+  console.log( $("#numberRecords") );
+  $("#numberRecords")
 
-  // var test = document.querySelector("#numberRecords");
-  // // var test = $("#numberRecords");
-  // console.log(test.selectedIndex); // returns the index the user selected
-  // var index = test.selectedIndex;
-  // var foo = test[index].innerHTML;
-  // // var foo = test[index].html();
-  // var foo = parseInt(foo);
-  // console.log(typeof foo);
+  var test = document.querySelector("#numberRecords");
+  // var test = $("#numberRecords");
+  console.log(test.selectedIndex); // returns the index the user selected
+  var index = test.selectedIndex;
+  var foo = test[index].innerHTML;
+  // var foo = test[index].html();
+  var foo = parseInt(foo);
+  console.log(typeof foo);
 
   // jQUERY !!!
-  // var selected = $("#numberRecords :selected").text().trim();
-  // var selected = $("#numberRecords").children("option").filter(":selected").text();
-  // console.log( typeof parseInt(selected) );
-  // console.log( typeof selected );
-  // console.log( selected );
+  var selected = $("#numberRecords :selected").text().trim();
+  var selected = $("#numberRecords").children("option").filter(":selected").text();
+  console.log( typeof parseInt(selected) );
+  console.log( typeof selected );
+  console.log( selected );
 
 
 });

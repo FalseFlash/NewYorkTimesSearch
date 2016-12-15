@@ -24,19 +24,19 @@
     <form>
       <div class="form-group">
         <label for="searchTerm">Search Term:</label>
-        <input type="text" class="form-control" id="searchTerm" placeholder="Put Desired Term Here">
+        <input type="text" class="form-control" id="searchTerm" placeholder="Put Desired Term Here" required>
       </div>
       <div class="form-group">
         <label for="numberRecords">Number of records to retrieve:</label>
-        <input type="text" class="form-control" id="numberRecords" placeholder="Put number of desired records here">
+        <input type="number" class="form-control" id="numberRecords" placeholder="Put number of desired records here">
       </div>
        <div class="form-group">
         <label for="startYear">Start Year(Optional):</label>
-        <input type="text" class="form-control" id="startYear" placeholder="(Optional)Put Start Year Here">
+        <input type="number" class="form-control" id="startYear" placeholder="(Optional)Put Start Year Here">
       </div>
        <div class="form-group">
         <label for="endYear">End Year(Optional)</label>
-        <input type="text" class="form-control" id="endYear" placeholder="(Optional)Put Start Year Here">
+        <input type="number" class="form-control" id="endYear" placeholder="(Optional)Put Start Year Here">
       </div>
       <button type="button" class="btn btn-default" id="buttonSearch"><span class="glyphicon glyphicon-search"></span> Search</button>
       <button type="button" class="btn btn-default" id="buttonClear"><span class="glyphicon glyphicon-trash"></span> Clear Results</button>
@@ -60,7 +60,6 @@
 <!-- Including scripts here -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="assets/javascript/private.js"></script>
 <script src="assets/javascript/main.js"></script>
 </body>
 </html>
