@@ -9,16 +9,58 @@
     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
   >
   <link rel="stylesheet" href="assets/css/style.css">
-
-  <title>Boilerplate for Heroku Deployment</title>
+  <title>New York Times Search</title>
 </head>
-<body>
-<h2> Includes JQuery and Bootstrap 3 cdn</h2>
 
+<body>
+  <div class="container">
+      <div class="jumbotron">
+        <h1> <span class="glyphicon glyphicon-search"></span> New York Times Search</h1>
+      </div>
+  </div>
+
+  <div class="container" id="formOne">
+    <div><h4><span class="glyphicon glyphicon-search"></span> Search Parameters</h4></div>
+    <form>
+      <div class="form-group">
+        <label for="searchTerm">Search Term:</label>
+        <input type="text" class="form-control" id="searchTerm" placeholder="Put Desired Term Here">
+      </div>
+      <div class="form-group">
+        <label for="numberRecords">Number of records to retrieve:</label>
+        <input type="text" class="form-control" id="numberRecords" placeholder="Put number of desired records here">
+      </div>
+       <div class="form-group">
+        <label for="startYear">Start Year(Optional):</label>
+        <input type="text" class="form-control" id="startYear" placeholder="(Optional)Put Start Year Here">
+      </div>
+       <div class="form-group">
+        <label for="endYear">End Year(Optional)</label>
+        <input type="text" class="form-control" id="endYear" placeholder="(Optional)Put Start Year Here">
+      </div>
+      <button type="button" class="btn btn-default" id="buttonSearch"><span class="glyphicon glyphicon-search"></span> Search</button>
+      <button type="button" class="btn btn-default" id="buttonClear"><span class="glyphicon glyphicon-trash"></span> Clear Results</button>
+    </form>
+   </div>
+
+
+  <!-- >>>>>>>>>>> Results Section <<<<<<<<< -->
+  <div class="container resultsSection">
+    <div class="row" id="resultsTarget">
+        <!-- <div id="resultsTarget"></div> -->
+    </div> <!-- closes searchSection row-->
+  </div>
+
+
+  <!-- >>>>>>>>>>> Footer Section <<<<<<<<< -->
+  <div class="footer container-fluid">
+  </div>
 
 
 <!-- Including scripts here -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="assets/javascript/private.js"></script>
 <script src="assets/javascript/main.js"></script>
 </body>
 </html>
